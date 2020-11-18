@@ -11,7 +11,7 @@ function validateEnv() {
         POSTGRES_USER: str(),
         POSTGRES_PORT: port(),
         POSTGRES_DB: str(),
-        SERVER_PORT: port(),
+        PORT: port(),
     });
 }
 

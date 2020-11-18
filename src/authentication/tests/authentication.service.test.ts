@@ -12,7 +12,6 @@ import * as request from 'supertest';
 
 describe('The Authentication Service', () => {
     // instancing the unit
-  const authenticationService = new AuthenticationService();
 
     // run case
   describe('when creating a cookie', () => {
@@ -25,6 +24,7 @@ describe('The Authentication Service', () => {
     it('should return a string', () => {
             // ...and its return value
       (typeorm as any).getRepository.mockReturnValue({});
+      const authenticationService = new AuthenticationService();
       expect(typeof authenticationService.createCookie(tokenData))
                 .toEqual('string');
     });
@@ -41,6 +41,7 @@ describe('The Authentication Service', () => {
         (typeorm as any).getRepository.mockReturnValue({
           findOne: () => Promise.resolve(userData),
         });
+        const authenticationService = new AuthenticationService();
         await expect(authenticationService.register(userData))
                   .rejects.toMatchObject(new UserWithThatEmailAlreadyExistsException(userData.email));
       });
@@ -62,6 +63,7 @@ describe('The Authentication Service', () => {
           }),
           save: () => Promise.resolve(),
         });
+        const authenticationService = new AuthenticationService();
         await expect(authenticationService.register(userData))
                   .resolves.toBeDefined();
       });

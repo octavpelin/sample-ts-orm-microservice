@@ -1,11 +1,12 @@
 language: node_js
 node_js:
-  - lts/*
+- lts/*
 script:
-  - "npm run lint"
-  - "npm run test"
-
-# safelist
+- npm run lint
+- npm run test
 branches:
   only:
-    - main
+  - main
+deploy:
+  api_key:
+    secure: guYkAJ9Qf0v2reNdmtGWOWyDtRkuaSZHC+KHdMXS+DIkkZHGeWZjDDLQF5kO9pT3izug6FJ7GfitevYX1oVVJuslslAae/Aurkgrhvpnr+NE0hpwdOkVqShoNqobTCoORflNJxuHXW6GM8xbnjXUZRTQAiUI4DJ3qTYEg3kbprUUOtR1fi2qmEZsKBBOOtwp7HcfU0VlT1wBKj50m3wm9P8vOmHrbZjjnEFlqEbla6lZQ1kwJxcWAkvH8hHoExWDxbplUDcUfNn0lm1o/9KHGEY5ieXISTwruHHv4OIgmPuuK+rAc2l3BbKCgXmA/LARf/2NybI0eE1iCJHB0eBDMxGqATOWrHPsGWVYzB+XI8Xyeo4DajaKLxM9DffmyYvQmJc/hEjmKIfK3zy7w8epzODBuodGlEJVlmACiXe2Vczzg+RtuP/99jub48cYNY+XxM8+zJGRcRnC/DbbF2ypMo0J7shEidRmQXRkKNBpyZ8FMph1gub3F8Et2KUSd4bBMNioKUv427kU/Dc+Xp0DM5Z8HZaeJFhrVsgokOcOUSHg5oPTRqLBbbAJWl2+Zk7evA7w6fs0yw++ycucI/fzYwW+jOnqO0ko7ZJvV1LMKbuAU6aJb5YMS21BjTjQgFhbftEd2+vp/NRCSCb4Gc4EfCUmQbPMZ2guMW6ZYhYTS+A=

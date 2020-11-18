@@ -3,13 +3,13 @@ import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 class Category {
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
     public id: number;
 
-    @Column()
+  @Column()
     public name: string;
 
-    @ManyToMany(() => Post, (post: Post) => post.categories)
+  @ManyToMany(() => Post, (post: Post) => post.categories)
     public posts: Post[];
 }
 

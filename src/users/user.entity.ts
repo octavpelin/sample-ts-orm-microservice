@@ -4,29 +4,29 @@ import Post from '../posts/post.entity';
 
 @Entity()
 class User {
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
     public id: string;
 
-    @Column()
+  @Column()
     public fullName: string;
 
-    @Column()
+  @Column()
     public email: string;
 
-    @Column()
+  @Column()
     public password: string;
 
-    @Column()
+  @Column()
     public twoFactorAuthenticationCode: string;
 
-    @Column()
+  @Column()
     public isTwoFactorAuthenticationEnabled: boolean;
 
-    @OneToOne(() => Address, (address: Address) => address.user, {cascade: true, eager: true})
+  @OneToOne(() => Address, (address: Address) => address.user, { cascade: true, eager: true })
     @JoinColumn()
     public address: Address;
 
-    @OneToMany(() => Post, (post: Post) => post.author)
+  @OneToMany(() => Post, (post: Post) => post.author)
     public posts: Post[];
 }
 

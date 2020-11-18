@@ -1,7 +1,7 @@
 import { IsString } from 'class-validator';
 
 class CreateCategoryDto {
-    @IsString()
+  @IsString()
     public name: string;
 }
 

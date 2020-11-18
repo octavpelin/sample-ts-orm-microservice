@@ -1,19 +1,19 @@
 import { IsNumber, IsString, ValidateNested } from 'class-validator';
 
 class CategoryInPostDto {
-    @IsNumber()
+  @IsNumber()
     public id: number;
 }
 
 class CreatePostDto {
 
-    @IsString()
+  @IsString()
     public content: string;
 
-    @IsString()
+  @IsString()
     public title: string;
 
-    @ValidateNested()
+  @ValidateNested()
     public categories: CategoryInPostDto[];
 }
 

@@ -16,6 +16,7 @@
         "interface-name": [true, "never-prefix"],
         "import-name": false,
         "no-console": false,
+        "max-classes-per-file": false,
         "object-literal-sort-keys": false
     },
     "rulesDirectory": []

@@ -1,13 +1,13 @@
 import { IsString } from 'class-validator';
 
 class CreateAddressDto {
-    @IsString()
+  @IsString()
     public street: string;
 
-    @IsString()
+  @IsString()
     public city: string;
 
-    @IsString()
+  @IsString()
     public country: string;
 }
 

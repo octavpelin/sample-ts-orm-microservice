@@ -3,19 +3,19 @@ import User from '../users/user.entity';
 
 @Entity()
 class Address {
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
     public id: string;
 
-    @Column()
+  @Column()
     public street: string;
 
-    @Column()
+  @Column()
     public city: string;
 
-    @Column()
+  @Column()
     public country: string;
 
-    @OneToOne(() => User, (user: User) => user.address)
+  @OneToOne(() => User, (user: User) => user.address)
     public user: User;
 }
 

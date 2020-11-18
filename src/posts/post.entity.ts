@@ -4,19 +4,19 @@ import Category from '../category/category.entity';
 
 @Entity()
 class Post {
-    @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn()
     public id?: number;
 
-    @Column()
+  @Column()
     public title: string;
 
-    @Column()
+  @Column()
     public content: string;
 
-    @ManyToOne(() => User, (author: User) => author.posts)
+  @ManyToOne(() => User, (author: User) => author.posts)
     public author: User;
 
-    @ManyToMany(() => Category, (category: Category) => category.posts)
+  @ManyToMany(() => Category, (category: Category) => category.posts)
     @JoinTable()
     public categories: Category[];
 }
